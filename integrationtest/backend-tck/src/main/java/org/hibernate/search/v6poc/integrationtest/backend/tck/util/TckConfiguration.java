@@ -49,4 +49,7 @@ public final class TckConfiguration {
 		return source.withMask( "backend" );
 	}
 
+	public ConfigurationPropertySource getDefaultIndexProperties() {
+		return source.withMask( "index.default" );
+	}
 }

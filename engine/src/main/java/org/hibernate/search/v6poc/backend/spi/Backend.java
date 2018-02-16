@@ -22,5 +22,4 @@ public interface Backend<D extends DocumentElement> extends AutoCloseable {
 
 	@Override
 	void close();
-
 }

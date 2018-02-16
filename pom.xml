@@ -35,7 +35,7 @@
         <module>integrationtest</module>
         <module>reports</module>
     </modules>
-    
+
     <properties>
         <!-- character encoding -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -149,7 +149,20 @@
                 <scope>provided</scope>
                 <optional>true</optional>
             </dependency>
-            
+
+            <!-- Lucene backend -->
+            <dependency>
+                <groupId>org.apache.lucene</groupId>
+                <artifactId>lucene-core</artifactId>
+                <version>7.1.0</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.lucene</groupId>
+                <artifactId>lucene-sandbox</artifactId>
+                <version>7.1.0</version>
+            </dependency>
+
+            <!-- Test -->
             <dependency>
                 <groupId>junit</groupId>
                 <artifactId>junit</artifactId>
@@ -190,7 +203,7 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
-    
+
     <build>
         <plugins>
             <plugin>
@@ -800,3 +813,4 @@
         </profile>
     </profiles>
 </project>
+

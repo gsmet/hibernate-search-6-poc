@@ -38,7 +38,8 @@ public class SearchSetupHelper extends ExternalResource {
 
 	public SetupContext withDefaultConfiguration() {
 		TckConfiguration tckConfiguration = TckConfiguration.get();
-		ConfigurationPropertySource propertySource = tckConfiguration.getBackendProperties().withPrefix( "backend.testedBackend" );
+		ConfigurationPropertySource propertySource = tckConfiguration.getBackendProperties().withPrefix( "backend.testedBackend" )
+				.withFallback( tckConfiguration.getDefaultIndexProperties() ).withPrefix( "index.default" );
 		return new SetupContext( propertySource )
 				.withProperty( "index.default.backend", "testedBackend" );
 	}
